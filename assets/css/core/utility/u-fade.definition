@@ -1,0 +1,16 @@
+// Fade Utility
+// ============================================================
+
+@u-fade-light: 0.8;
+@u-fade: 0.6;
+@u-fade-hard: 0.4;
+
+.u-fade {
+	opacity: @u-fade !important;
+	&-light {
+		opacity: @u-fade-light !important;
+	}
+	&-hard {
+		opacity: @u-fade-hard !important;
+	}
+}

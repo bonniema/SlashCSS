@@ -1,0 +1,21 @@
+// Border Utility
+// ============================================================
+
+@u-border: 1px solid #dedede;
+
+
+.u-border {
+  border: @u-border !important;
+}
+.u-border-top {
+  border-top: @u-border !important;
+}
+.u-border-right {
+  border-right: @u-border !important;
+}
+.u-border-bottom {
+  border-bottom: @u-border !important;
+}
+.u-border-left {
+  border-left: @u-border !important;
+}

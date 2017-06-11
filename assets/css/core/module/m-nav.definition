@@ -1,0 +1,35 @@
+// Navigation Module
+// ============================================================
+
+@m-nav-height: 60px;
+@m-nav-bg: @brand-color;
+
+.m-nav {
+  display: flex;
+  width: 100%;
+  height: @m-nav-height;
+  .box(@m-nav-bg);
+  a {
+    color: white;
+  }
+  &__group {
+    display: flex;
+    &.-right {
+      margin-left: auto;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    padding-left: @vr0;
+    padding-right: @vr0;
+    font-weight: @semi-bold;
+    transition: background .2s ease;
+    &:hover {
+      background: darken(@brand-color, 5%);
+    }
+    &.is-active {
+      background: darken(@brand-color, 8%);
+    }
+  }
+}

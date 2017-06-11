@@ -1,0 +1,467 @@
+// Button Single
+// ============================================================
+
+
+// Color
+@s-button-brand: @brand-color;
+@s-button-accent: @accent-color;
+@s-button-red: @red;
+@s-button-orange: @orange;
+@s-button-yellow: @yellow;
+@s-button-green: @green;
+@s-button-blue: @blue;
+@s-button-purple: @purple;
+@s-button-black: @black;
+@s-button-white: @white;
+
+// Border
+@s-button-shadow-weight: 2px;
+@s-button-radius: @radius;
+
+// Typography
+@s-button-font-family: @font-family;
+@s-button-font-weight: @regular;
+
+// Gradient Intensity
+@s-button-gradient-top: 5%;
+@s-button-gradient-bottom: 5%;
+
+// Standard Button Mixin
+.s-button-mixin(@s-button-brand: @s-button-brand) {
+  background: @s-button-brand;
+  box-shadow: 0px -2px 0px 0px shade(@s-button-brand, 10%) inset;
+  &:hover {
+    background: shade(@s-button-brand, 5%);
+  }
+  &:active {
+    background: shade(@s-button-brand, 10%);
+  }
+}
+
+// Outline Button Mixin
+.s-button-outline-mixin(@outline-color: #fff) {
+  box-shadow: inset 0px 0px 0px @s-button-shadow-weight @outline-color;
+  color: @outline-color;
+  &:hover {
+    background: fade(@outline-color, 20%);
+  }
+  &:active {
+    background: fade(@outline-color, 30%);
+  }
+}
+
+
+.s-button {
+
+  display: inline-block;
+  margin-right: .25em;
+  padding: @vr-1 @vr0;
+  outline: none;
+  border: none;
+  border-radius: @s-button-radius;
+  font-family: @s-button-font-family;
+  font-size: @ms0;
+  font-weight: @s-button-font-weight;
+  line-height: 2rem;
+  color: white;
+  vertical-align: middle;
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  .s-button-mixin();
+
+  // Pseudo
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    background: shade(@s-button-brand, 10%);
+    color: white;
+  }
+  &:active {
+    background: shade(@s-button-brand, 20%);
+    color: white;
+  }
+
+  &.-accent {
+    .s-button-mixin(@s-button-accent);
+  }
+  &.-red {
+    .s-button-mixin(@s-button-red);
+  }
+  &.-orange {
+    .s-button-mixin(@s-button-orange);
+  }
+  &.-yellow {
+    .s-button-mixin(@s-button-yellow);
+  }
+  &.-green {
+    .s-button-mixin(@s-button-green);
+  }
+  &.-blue {
+    .s-button-mixin(@s-button-blue);
+  }
+  &.-purple {
+    .s-button-mixin(@s-button-purple);
+  }
+  &.-black {
+    .s-button-mixin(@s-button-black);
+  }
+  &.-white {
+    .s-button-mixin(@s-button-white);
+    color: @brand-color;
+  }
+
+  // Sizes
+  // ------------------------------
+
+  &.-small {
+    padding: 0 @vr-1 0 @vr-1;
+    font-size: @ms-1;
+  }
+  &.-medium {
+    padding: @vr-1 + (@vr-1 / 2);
+    font-size: @ms0;
+  }
+  &.-large {
+    padding: @vr0;
+    font-size: @ms1;
+  }
+
+  // Weight
+  // ------------------------------
+
+  &.-light {
+    font-weight: @light;
+  }
+  &.-regular {
+    font-weight: @regular;
+  }
+  &.-semi-bold {
+    font-weight: @semi-bold;
+  }
+  &.-bold {
+    font-weight: @bold;
+  }
+
+  // Corners
+  // ------------------------------
+
+  &.-round {
+    border-radius: 60px;
+  }
+  &.-sharp {
+    border-radius: 0;
+  }
+
+  // Span
+  // ------------------------------
+
+  &.-broad {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  &.-broader {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+  &.-broadest {
+    padding-left: 6em;
+    padding-right: 6em;
+  }
+  &.-fluid {
+    width: 100%;
+  }
+
+
+  // Variation
+  // ------------------------------
+
+  &.-outline {
+    box-shadow: inset 0px 0px 0px @s-button-shadow-weight @s-button-brand;
+    background: transparent;
+    color: @s-button-brand;
+    &:hover {
+      background: fade(@s-button-brand, 30%);
+    }
+    &:active {
+      background: fade(@s-button-brand, 40%);
+    }
+    &.-accent {
+      .s-button-outline-mixin(@s-button-accent);
+    }
+    &.-red {
+      .s-button-outline-mixin(@s-button-red);
+    }
+    &.-orange {
+      .s-button-outline-mixin(@s-button-orange);
+    }
+    &.-yellow {
+      .s-button-outline-mixin(@s-button-yellow);
+    }
+    &.-green {
+      .s-button-outline-mixin(@s-button-green);
+    }
+    &.-blue {
+      .s-button-outline-mixin(@s-button-blue);
+    }
+    &.-purple {
+      .s-button-outline-mixin(@s-button-purple);
+    }
+    &.-black {
+      .s-button-outline-mixin(@s-button-black);
+    }
+    &.-white {
+      .s-button-outline-mixin(@s-button-white);
+    }
+  }
+}
+
+
+// Button Group
+// ------------------------------
+
+
+.s-button-group {
+
+  display: inline-flex;
+
+  &.-fluid {
+    width: 100%;
+  }
+  .s-button {
+    flex: auto;
+    border-radius: 0;
+    margin: 0;
+    &:not(:first-child) {
+      margin-left: -@s-button-shadow-weight;
+    }
+    &:first-child {
+      border-top-left-radius: @s-button-radius;
+      border-bottom-left-radius: @s-button-radius;
+    }
+    &:last-child {
+      border-top-right-radius: @s-button-radius;
+      border-bottom-right-radius: @s-button-radius;
+    }
+    &.-outline {
+      &:not(:first-child) {
+        margin-left: -@s-button-shadow-weight;
+      }
+    }
+  }
+  &.-sharp {
+    .s-button {
+      flex: auto;
+      margin: 0;
+      border-radius: 0;
+      &:not(:first-child) {
+        margin-left: -@s-button-shadow-weight;
+      }
+      &:first-child {
+        border-radius: 0;
+      }
+      &:last-child {
+        border-radius: 0;
+      }
+    }
+  }
+  &.-round {
+    .s-button {
+      flex: auto;
+      margin: 0;
+      border-radius: 0;
+      &:not(:first-child) {
+        margin-left: -@s-button-shadow-weight;
+      }
+      &:first-child {
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+      }
+      &:last-child {
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+      }
+    }
+  }
+  &.-vertical {
+    flex-direction: column;
+    &.-fluid {
+      width: 100%;
+      .s-button {
+        width: 100%;
+      }
+    }
+    &.-wide {
+      .s-button {
+        padding-left: 6em;
+        padding-right: 6em;
+      }
+    }
+    .s-button {
+      &:not(:first-child) {
+        margin-top: -@s-button-shadow-weight;
+        margin-left: 0;
+      }
+      &:first-child {
+        border-top-right-radius: @s-button-radius;
+        border-top-left-radius: @s-button-radius;
+        border-bottom-left-radius: 0;
+      }
+      &:last-child {
+        border-bottom-right-radius: @s-button-radius;
+        border-bottom-left-radius: @s-button-radius;
+        border-top-right-radius: 0;
+      }
+      &.-outline {
+        &:not(:first-child) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  &.-vertical.-round {
+    .s-button {
+      flex: 1 1 auto;
+      margin: 0;
+      border-radius: 0;
+      &:not(:first-child) {
+        margin-top: -@s-button-shadow-weight;
+      }
+      &:first-child {
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+      }
+      &:last-child {
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+      }
+    }
+  }
+  &.-m-vertical {
+    @media @mobile {
+      flex-direction: column;
+      &.-round {
+        .s-button {
+          flex: 1 1 auto;
+          margin: 0;
+          border-radius: 0;
+          &:not(:first-child) {
+            margin-top: -@s-button-shadow-weight;
+          }
+          &:first-child {
+            border-top-right-radius: 50px;
+            border-top-left-radius: 50px;
+          }
+          &:last-child {
+            border-bottom-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+          }
+        }
+      }
+      .s-button {
+        flex: 1 1 auto;
+        margin: 0;
+        border-radius: 0;
+        &:not(:first-child) {
+          margin-top: -@s-button-shadow-weight;
+        }
+        &:first-child {
+          border-top-right-radius: @s-button-radius;
+          border-top-left-radius: @s-button-radius;
+        }
+        &:last-child {
+          border-bottom-right-radius: @s-button-radius;
+          border-bottom-left-radius: @s-button-radius;
+        }
+        &.-outline:not(:first-child) {
+           margin-left: 0;
+        }
+      }
+    }
+  }
+  &.-t-vertical {
+    @media @tablet {
+      flex-direction: column;
+      &.-round {
+        .s-button {
+          flex: 1 1 auto;
+          margin: 0;
+          border-radius: 0;
+          &:not(:first-child) {
+            margin-top: -@s-button-shadow-weight;
+          }
+          &:first-child {
+            border-top-right-radius: 50px;
+            border-top-left-radius: 50px;
+          }
+          &:last-child {
+            border-bottom-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+          }
+        }
+      }
+      .s-button {
+        flex: auto;
+        margin: 0;
+        border-radius: 0;
+        &:not(:first-child) {
+          margin-top: -@s-button-shadow-weight;
+        }
+        &:first-child {
+          border-top-right-radius: @s-button-radius;
+          border-top-left-radius: @s-button-radius;
+        }
+        &:last-child {
+          border-bottom-right-radius: @s-button-radius;
+          border-bottom-left-radius: @s-button-radius;
+        }
+        &.-outline:not(:first-child) {
+           margin-left: 0;
+        }
+      }
+    }
+  }
+   &.-d-vertical {
+    @media @desktop {
+      flex-direction: column;
+      &.-round {
+        .s-button {
+          flex: auto;
+          margin: 0;
+          border-radius: 0;
+          &:not(:first-child) {
+            margin-top: -@s-button-shadow-weight;
+          }
+          &:first-child {
+            border-top-right-radius: 50px;
+            border-top-left-radius: 50px;
+          }
+          &:last-child {
+            border-bottom-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+          }
+        }
+      }
+      .s-button {
+        flex: auto;
+        margin: 0;
+        border-radius: 0;
+        &:not(:first-child) {
+          margin-top: -@s-button-shadow-weight;
+        }
+        &:first-child {
+          border-top-right-radius: @s-button-radius;
+          border-top-left-radius: @s-button-radius;
+        }
+        &:last-child {
+          border-bottom-right-radius: @s-button-radius;
+          border-bottom-left-radius: @s-button-radius;
+        }
+        &.-outline:not(:first-child) {
+           margin-left: 0;
+        }
+      }
+    }
+  }
+}

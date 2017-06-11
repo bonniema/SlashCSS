@@ -1,0 +1,122 @@
+// Table Module
+// ============================================================
+
+@m-table-hover-color: lighten(@brand-color, 50%);
+
+.m-table-resp-properties {
+  background: transparent;
+  box-shadow: none;
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    display: block;
+    .card;
+    margin-bottom: @vr0;
+  }
+  th, td {
+    display: block;
+    height: auto;
+    padding: @vr-1;
+    text-align: right;
+  }
+
+  td:before {
+    content: attr(data-label);
+    float: left;
+    font-size: @ms-1;
+    font-weight: @semi-bold;
+    text-transform: uppercase;
+    color: @black;
+  }
+}
+
+.m-table {
+  border-collapse: separate;
+  text-align: left;
+  .card;
+
+  &.-fluid {
+    width: 100%;
+  }
+  &.-resp {
+    @media @mobile, @tablet {
+      .m-table-resp-properties;
+    }
+  }
+  &.-resp-m {
+    @media @mobile {
+      .m-table-resp-properties;
+    }
+  }
+  &.-resp-t {
+    @media @tablet {
+      .m-table-resp-properties;
+    }
+  }
+  &.-headless {
+    @media @mobile, @tablet {
+      th, td {
+        text-align: left;
+      }
+    }
+  }
+  thead {
+    th {
+      height: @vr2;
+      font-size: @ms0;
+      font-weight: @semi-bold;
+      color: @black;
+      &.-clickable {
+        cursor: pointer;
+        &:hover {
+          background: @m-table-hover-color;
+        }
+      }
+    }
+  }
+  tbody {
+    &.-clickable {
+      tr{
+        cursor: pointer;
+        &:hover {
+          background: @m-table-hover-color;
+        }
+      }
+    }
+  }
+  tr {
+    transition: background .2s ease;
+  }
+  th, td {
+    height: @vr2;
+    vertical-align: middle;
+    padding-left: @vr0;
+    padding-right: @vr0;
+    border-bottom: @border;
+    transition: background .2s ease;
+
+    // This builds the shrink/grow functionality into the table
+    // &:not(:last-child){
+    //   white-space: nowrap;
+    // }
+    // &:first-child{
+    //   width: 100%;
+    // }
+
+    &.-shrink {
+      white-space: nowrap;
+    }
+    &.-grow {
+      width: 99%;
+    }
+    a {
+      padding-right: @vr1;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}

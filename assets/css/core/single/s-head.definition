@@ -1,0 +1,118 @@
+// Head Single
+// ============================================================
+
+// Weight Variables
+@s-head-light: @light;
+@s-head-regular: @regular;
+@s-head-medium: @medium;
+@s-head-semi-bold: @semi-bold;
+@s-head-bold: @bold;
+
+// Spacing Variables
+@s-head-tight: @vr-1;
+@s-head-narrow: @vr0;
+@s-head-wide: @vr1;
+
+// Custom
+@s-head-cond: -1px;
+@s-head-sprd: 1px;
+
+// Define
+// ------------------------------
+
+.s-head {
+  display: block;
+
+  &.-inline {
+    display: inline-block;
+  }
+
+  // Size Overrides
+  // ------------------------------
+
+  &.-h1 {
+    font-size: @ms4;
+  }
+  &.-h2 {
+    font-size: @ms3;
+  }
+  &.-h3 {
+    font-size: @ms2;
+  }
+  &.-h4 {
+    font-size: @ms1;
+  }
+  &.-h5 {
+    font-size: @ms0;
+  }
+  &.-h6 {
+    font-size: @ms-1;
+  }
+
+
+  // Weight Variation
+  // ------------------------------
+
+  &.-light {
+    font-weight: @s-head-light;
+  }
+  &.-regular {
+    font-weight: @s-head-regular;
+  }
+  &.-medium {
+    font-weight: @s-head-medium;
+  }
+  &.-semi-bold {
+    font-weight: @s-head-semi-bold;
+  }
+  &.-bold {
+    font-weight: @s-head-bold;
+  }
+
+  // Custom Variation
+  // ------------------------------
+
+  &.-uppr {
+    text-transform: uppercase;
+  }
+  &.-cond {
+    letter-spacing: @s-head-cond;
+  }
+  &.-sprd {
+    letter-spacing: @s-head-sprd;
+  }
+  &.-inline {
+    display: inline-block;
+  }
+  &.-ruled {
+    padding-bottom: @vr-1;
+    border-bottom: 1px solid darken(@background, 10%);
+    margin-bottom: @vr0 + @vr-1;
+  }
+
+
+  // Reset
+  // ------------------------------
+
+  &.-r {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+
+  // Spacing Variations
+  // ------------------------------
+
+  &.-tight {
+    margin-bottom: @s-head-tight;
+  }
+  &.-narrow {
+    margin-bottom: @s-head-narrow;
+  }
+  &.-wide {
+    margin-bottom: @s-head-wide;
+  }
+  &.-relaxed {
+    line-height: 1.5;
+  }
+}

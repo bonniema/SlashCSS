@@ -1,0 +1,90 @@
+// List Module
+// ============================================================
+
+@m-list-tight: @vr-1;
+@m-list-narrow: @vr0;
+@m-list-wide: @vr1;
+
+
+.m-list {
+
+  list-style: none;
+  margin-bottom: 0;
+
+  ul, ol {
+    list-style: none;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    display: block;
+  }
+
+
+  // Direction
+  // ------------------------------
+
+  &.-inline {
+    & > li, .m-list__item {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+    &.-tight,&.-narrow,&.-wide {
+      & > li, .m-list__item {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &.-inline.-raw {
+    & > li, .m-list__item {
+      margin-right: 0;
+    }
+    li, .m-list__item:last-child {
+      margin-right: 0;
+    }
+  }
+  &.-inline.-tight {
+    & > li, .m-list__item {
+      margin-right: @m-list-tight;
+    }
+    li, .m-list__item:last-child {
+      margin-right: 0;
+    }
+  }
+  &.-inline.-narrow {
+    & > li, .m-list__item {
+      margin-right: @m-list-narrow;
+    }
+    li, .m-list__item:last-child {
+      margin-right: 0;
+    }
+  }
+  &.-inline.-wide {
+    & > li, .m-list__item {
+      margin-right: @m-list-wide;
+    }
+    li, .m-list__item:last-child {
+      margin-right: 0;
+    }
+  }
+
+
+  // Spacing
+  // ------------------------------
+
+  &.-tight {
+    & > li, .m-list__item {
+      margin-bottom: @m-list-tight;
+    }
+  }
+  &.-narrow {
+    & > li, .m-list__item {
+      margin-bottom: @m-list-narrow;
+    }
+  }
+  &.-wide {
+    & > li, .m-list__item {
+      margin-bottom: @m-list-wide;
+    }
+  }
+}

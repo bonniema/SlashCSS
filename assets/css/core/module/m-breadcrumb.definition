@@ -1,0 +1,18 @@
+// Media Module
+// ============================================================
+
+.m-breadcrumb {
+  flex: 1 0 auto;
+  align-items: center;
+  &__item {
+    color: @brand-color;
+  }
+  &__slash{
+    margin-left: @vr-1;
+    margin-right: @vr-1;
+    color: #CACACA;
+  }
+  &__current {
+    color: @black;
+  }
+}

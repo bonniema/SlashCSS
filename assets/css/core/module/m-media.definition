@@ -1,0 +1,60 @@
+// Media Module
+// ============================================================
+
+@m-media-tight: @vr-1;
+@m-media-narrow: @vr0;
+@m-media-wide: @vr1;
+
+
+.m-media {
+
+  display: flex;
+  margin: 0;
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    & > img {
+      display: block;
+      max-width: none;
+    }
+    &.-top {
+      align-items: flex-start;
+    }
+    &.-bottom {
+      align-items: flex-end;
+    }
+    &.-tight {
+      padding-right: @m-media-tight;
+    }
+    &.-narrow {
+      padding-right: @m-media-narrow;
+    }
+    &.-wide {
+      padding-right: @m-media-wide;
+    }
+  }
+
+  &.-fluid {
+    width: 100%;
+  }
+  &.-centered {
+    margin: auto;
+  }
+
+
+  &.-reversed {
+    .m-media__item {
+      &.-tight {
+        padding-left: @m-media-tight;
+      }
+      &.-narrow {
+        padding-left: @m-media-narrow;
+      }
+      &.-wide {
+        padding-left: @m-media-wide;
+      }
+    }
+  }
+}

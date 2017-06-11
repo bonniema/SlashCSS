@@ -1,6 +1,9 @@
 # zap-css
 Lightweight and scalable CSS Framework built for modern applications
 
+## Jekyll Boilerplate Available
+You can download the Zap boilerplate framework for Jekyll at https://github.com/studiobeneath/zap-jekyll
+
 ---
 
 The MIT License (MIT)

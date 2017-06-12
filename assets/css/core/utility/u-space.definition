@@ -72,192 +72,210 @@
 
 
 @media @mobile {
-  .u-space-m {
+  .u-space {
     // Space After
     // ------------------------------
     // Margin after element
-
-    &-after-min {
-      margin-bottom: @u-space-min !important;
-    }
-    &-after-small {
-      margin-bottom: @u-space-small !important;
-    }
-    &-after {
-      margin-bottom: @u-space-medium !important;
-    }
-    &-after-large {
-      margin-bottom: @u-space-large !important;
-    }
-    &-after-max {
-      margin-bottom: @u-space-max !important;
+    &-after-m {
+      &-min {
+        margin-bottom: @u-space-min !important;
+      }
+      &-small {
+        margin-bottom: @u-space-small !important;
+      }
+      & {
+        margin-bottom: @u-space-medium !important;
+      }
+      &-large {
+        margin-bottom: @u-space-large !important;
+      }
+      &-max {
+        margin-bottom: @u-space-max !important;
+      }
     }
 
     // Space Out Child
     // ------------------------------
     // Spaces out child elements vertically
 
-    &-child-min > * + * {
-      margin-top: @u-space-min !important;
-    }
-    &-child-small > * + * {
-      margin-top: @u-space-small !important;
-    }
-    &-child > * + * {
-      margin-top: @u-space-medium !important;
-    }
-    &-child-large > * + * {
-      margin-top: @u-space-large !important;
-    }
-    &-child-max > * + * {
-      margin-top: @u-space-max !important;
+    &-child-m {
+      &-min > * + * {
+        margin-top: @u-space-min !important;
+      }
+      &-small > * + * {
+        margin-top: @u-space-small !important;
+      }
+      & > * + * {
+        margin-top: @u-space-medium !important;
+      }
+      &-large > * + * {
+        margin-top: @u-space-large !important;
+      }
+      &-max > * + * {
+        margin-top: @u-space-max !important;
+      }
     }
 
     // Space Out Child Left
     // ------------------------------
     // Spaces out child elements Horizontally
 
-    &-child-left-min > * + * {
-      margin-left: @u-space-min !important;
+    &-child-left-m {
+      &-min > * + * {
+        margin-left: @u-space-min !important;
+      }
+      &-small > * + * {
+        margin-left: @u-space-small !important;
+      }
+      & > * + * {
+        margin-left: @u-space-medium !important;
+      }
+      &-large > * + * {
+        margin-left: @u-space-large !important;
+      }
+      &-max > * + * {
+        margin-left: @u-space-max !important;
+      }
     }
-    &-child-left-small > * + * {
-      margin-left: @u-space-small !important;
-    }
-    &-child-left > * + * {
-      margin-left: @u-space-medium !important;
-    }
-    &-child-left-large > * + * {
-      margin-left: @u-space-large !important;
-    }
-    &-child-left-max > * + * {
-      margin-left: @u-space-max !important;
-    }
+
   }
 
 }
 @media @tablet {
-  .u-space-t {
+  .u-space {
     // Space After
     // ------------------------------
     // Margin after element
-
-    &-after-min {
-      margin-bottom: @u-space-min !important;
-    }
-    &-after-small {
-      margin-bottom: @u-space-small !important;
-    }
-    &-after {
-      margin-bottom: @u-space-medium !important;
-    }
-    &-after-large {
-      margin-bottom: @u-space-large !important;
-    }
-    &-after-max {
-      margin-bottom: @u-space-max !important;
+    &-after-t {
+      &-min {
+        margin-bottom: @u-space-min !important;
+      }
+      &-small {
+        margin-bottom: @u-space-small !important;
+      }
+      & {
+        margin-bottom: @u-space-medium !important;
+      }
+      &-large {
+        margin-bottom: @u-space-large !important;
+      }
+      &-max {
+        margin-bottom: @u-space-max !important;
+      }
     }
 
     // Space Out Child
     // ------------------------------
     // Spaces out child elements vertically
 
-    &-child-min > * + * {
-      margin-top: @u-space-min !important;
-    }
-    &-child-small > * + * {
-      margin-top: @u-space-small !important;
-    }
-    &-child > * + * {
-      margin-top: @u-space-medium !important;
-    }
-    &-child-large > * + * {
-      margin-top: @u-space-large !important;
-    }
-    &-child-max > * + * {
-      margin-top: @u-space-max !important;
+    &-child-t {
+      &-min > * + * {
+        margin-top: @u-space-min !important;
+      }
+      &-small > * + * {
+        margin-top: @u-space-small !important;
+      }
+      & > * + * {
+        margin-top: @u-space-medium !important;
+      }
+      &-large > * + * {
+        margin-top: @u-space-large !important;
+      }
+      &-max > * + * {
+        margin-top: @u-space-max !important;
+      }
     }
 
     // Space Out Child Left
     // ------------------------------
     // Spaces out child elements Horizontally
 
-    &-child-left-min > * + * {
-      margin-left: @u-space-min !important;
+    &-child-left-t {
+      &-min > * + * {
+        margin-left: @u-space-min !important;
+      }
+      &-small > * + * {
+        margin-left: @u-space-small !important;
+      }
+      & > * + * {
+        margin-left: @u-space-medium !important;
+      }
+      &-large > * + * {
+        margin-left: @u-space-large !important;
+      }
+      &-max > * + * {
+        margin-left: @u-space-max !important;
+      }
     }
-    &-child-left-small > * + * {
-      margin-left: @u-space-small !important;
-    }
-    &-child-left > * + * {
-      margin-left: @u-space-medium !important;
-    }
-    &-child-left-large > * + * {
-      margin-left: @u-space-large !important;
-    }
-    &-child-left-max > * + * {
-      margin-left: @u-space-max !important;
-    }
+
   }
 }
 @media @desktop {
-  .u-space-d {
+  .u-space {
     // Space After
     // ------------------------------
     // Margin after element
-
-    &-after-min {
-      margin-bottom: @u-space-min !important;
-    }
-    &-after-small {
-      margin-bottom: @u-space-small !important;
-    }
-    &-after {
-      margin-bottom: @u-space-medium !important;
-    }
-    &-after-large {
-      margin-bottom: @u-space-large !important;
-    }
-    &-after-max {
-      margin-bottom: @u-space-max !important;
+    &-after-d {
+      &-min {
+        margin-bottom: @u-space-min !important;
+      }
+      &-small {
+        margin-bottom: @u-space-small !important;
+      }
+      & {
+        margin-bottom: @u-space-medium !important;
+      }
+      &-large {
+        margin-bottom: @u-space-large !important;
+      }
+      &-max {
+        margin-bottom: @u-space-max !important;
+      }
     }
 
     // Space Out Child
     // ------------------------------
     // Spaces out child elements vertically
 
-    &-child-min > * + * {
-      margin-top: @u-space-min !important;
-    }
-    &-child-small > * + * {
-      margin-top: @u-space-small !important;
-    }
-    &-child > * + * {
-      margin-top: @u-space-medium !important;
-    }
-    &-child-large > * + * {
-      margin-top: @u-space-large !important;
-    }
-    &-child-max > * + * {
-      margin-top: @u-space-max !important;
+    &-child-d {
+      &-min > * + * {
+        margin-top: @u-space-min !important;
+      }
+      &-small > * + * {
+        margin-top: @u-space-small !important;
+      }
+      & > * + * {
+        margin-top: @u-space-medium !important;
+      }
+      &-large > * + * {
+        margin-top: @u-space-large !important;
+      }
+      &-max > * + * {
+        margin-top: @u-space-max !important;
+      }
     }
 
     // Space Out Child Left
     // ------------------------------
     // Spaces out child elements Horizontally
 
-    &-child-left-min > * + * {
-      margin-left: @u-space-min !important;
+    &-child-left-d {
+      &-min > * + * {
+        margin-left: @u-space-min !important;
+      }
+      &-small > * + * {
+        margin-left: @u-space-small !important;
+      }
+      & > * + * {
+        margin-left: @u-space-medium !important;
+      }
+      &-large > * + * {
+        margin-left: @u-space-large !important;
+      }
+      &-max > * + * {
+        margin-left: @u-space-max !important;
+      }
     }
-    &-child-left-small > * + * {
-      margin-left: @u-space-small !important;
-    }
-    &-child-left > * + * {
-      margin-left: @u-space-medium !important;
-    }
-    &-child-left-large > * + * {
-      margin-left: @u-space-large !important;
-    }
-    &-child-left-max > * + * {
-      margin-left: @u-space-max !important;
-    }
+
   }
 }

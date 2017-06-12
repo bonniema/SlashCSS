@@ -6,7 +6,7 @@
   position: relative;
   clear: both;
   width: 100%;
-  .box(@background);
+  .fill(@background);
   &:after {
     content: "";
     display: table;
@@ -17,44 +17,44 @@
   // Background
   // ------------------------------
 
-  &.-orange {
-    .box(@orange);
+  &.-red {
+    .fill(@red);
   }
   &.-orange {
-    .box(@orange);
+    .fill(@orange);
   }
   &.-yellow {
-    .box(@yellow);
+    .fill(@yellow);
   }
   &.-green {
-    .box(@green);
+    .fill(@green);
   }
   &.-blue {
-    .box(@blue);
+    .fill(@blue);
   }
   &.-purple {
-    .box(@purple);
+    .fill(@purple);
   }
   &.-black {
-    .box(@black);
+    .fill(@black);
   }
   &.-white {
-    .box(@white);
+    .fill(@white);
   }
   &.-brand {
-    .box(@brand-color);
+    .fill(@brand-color);
   }
   &.-accent {
-    .box(@accent-color);
+    .fill(@accent-color);
   }
   &.-shade-light {
-    .box(@shade-light);
+    .fill(@shade-light);
   }
   &.-shade {
-    .box(@shade);
+    .fill(@shade);
   }
   &.-shade-heavy {
-    .box(@shade-heavy);
+    .fill(@shade-heavy);
   }
 
 
@@ -69,7 +69,7 @@
   // Border
   // ------------------------------
 
-  &.-flat {
-    box-shadow: none;
+  &.-border {
+    box-shadow: @border;
   }
 }

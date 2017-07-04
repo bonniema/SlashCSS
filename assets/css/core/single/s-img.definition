@@ -15,4 +15,7 @@
   &.-round {
     border-radius: 100%;
   }
+  &.-fluid {
+    width: 100%;
+  }
 }

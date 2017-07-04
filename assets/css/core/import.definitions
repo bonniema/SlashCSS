@@ -44,7 +44,8 @@
 @import "utility/u-fill.definition";
 @import "utility/u-float.definition";
 @import "utility/u-pad.definition";
-@import "utility/u-space.definition";
+@import "utility/u-dist.definition";
 @import "utility/u-border.definition";
 @import "utility/u-hide.definition";
 @import "utility/u-show.definition";
+@import "utility/u-marg.definition";

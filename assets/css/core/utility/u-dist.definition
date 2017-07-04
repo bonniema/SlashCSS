@@ -1,0 +1,195 @@
+// Distribute Utility
+// ============================================================
+
+@u-dist-min: @vr-1;
+@u-dist-small: @vr0;
+@u-dist-medium: @vr1;
+@u-dist-large: @vr2;
+@u-dist-max: @vr3;
+
+.u-dist {
+
+  // Space Out Child
+  // ------------------------------
+  // Spaces out child elements vertically
+
+  &-min > * + * {
+    margin-top: @u-dist-min !important;
+  }
+  &-small > * + * {
+    margin-top: @u-dist-small !important;
+  }
+  & > * + * {
+    margin-top: @u-dist-medium !important;
+  }
+  &-large > * + * {
+    margin-top: @u-dist-large !important;
+  }
+  &-max > * + * {
+    margin-top: @u-dist-max !important;
+  }
+
+  // Space Out Child Left
+  // ------------------------------
+  // Spaces out child elements Horizontally
+
+  &-left-min > * + * {
+    margin-left: @u-dist-min !important;
+  }
+  &-left-small > * + * {
+    margin-left: @u-dist-small !important;
+  }
+  &-left > * + * {
+    margin-left: @u-dist-medium !important;
+  }
+  &-left-large > * + * {
+    margin-left: @u-dist-large !important;
+  }
+  &-left-max > * + * {
+    margin-left: @u-dist-max !important;
+  }
+}
+
+
+
+@media @mobile {
+  .u-dist-m {
+    // Space Out Child
+    // ------------------------------
+    // Spaces out child elements vertically
+
+    & {
+      &-min > * + * {
+        margin-top: @u-dist-min !important;
+      }
+      &-small > * + * {
+        margin-top: @u-dist-small !important;
+      }
+      & > * + * {
+        margin-top: @u-dist-medium !important;
+      }
+      &-large > * + * {
+        margin-top: @u-dist-large !important;
+      }
+      &-max > * + * {
+        margin-top: @u-dist-max !important;
+      }
+    }
+
+    // Space Out Child Left
+    // ------------------------------
+    // Spaces out child elements Horizontally
+
+    &-left {
+      &-min > * + * {
+        margin-left: @u-dist-min !important;
+      }
+      &-small > * + * {
+        margin-left: @u-dist-small !important;
+      }
+      & > * + * {
+        margin-left: @u-dist-medium !important;
+      }
+      &-large > * + * {
+        margin-left: @u-dist-large !important;
+      }
+      &-max > * + * {
+        margin-left: @u-dist-max !important;
+      }
+    }
+
+  }
+
+}
+@media @tablet {
+  .u-dist-t {
+    // Space Out Child
+    // ------------------------------
+    // Spaces out child elements vertically
+
+    & {
+      &-min > * + * {
+        margin-top: @u-dist-min !important;
+      }
+      &-small > * + * {
+        margin-top: @u-dist-small !important;
+      }
+      & > * + * {
+        margin-top: @u-dist-medium !important;
+      }
+      &-large > * + * {
+        margin-top: @u-dist-large !important;
+      }
+      &-max > * + * {
+        margin-top: @u-dist-max !important;
+      }
+    }
+
+    // Space Out Child Left
+    // ------------------------------
+    // Spaces out child elements Horizontally
+
+    &-left {
+      &-min > * + * {
+        margin-left: @u-dist-min !important;
+      }
+      &-small > * + * {
+        margin-left: @u-dist-small !important;
+      }
+      & > * + * {
+        margin-left: @u-dist-medium !important;
+      }
+      &-large > * + * {
+        margin-left: @u-dist-large !important;
+      }
+      &-max > * + * {
+        margin-left: @u-dist-max !important;
+      }
+    }
+  }
+}
+@media @desktop {
+  // Space Out Child
+  // ------------------------------
+  // Spaces out child elements vertically
+
+  & {
+    &-min > * + * {
+      margin-top: @u-dist-min !important;
+    }
+    &-small > * + * {
+      margin-top: @u-dist-small !important;
+    }
+    & > * + * {
+      margin-top: @u-dist-medium !important;
+    }
+    &-large > * + * {
+      margin-top: @u-dist-large !important;
+    }
+    &-max > * + * {
+      margin-top: @u-dist-max !important;
+    }
+  }
+
+  // Space Out Child Left
+  // ------------------------------
+  // Spaces out child elements Horizontally
+
+  &-left {
+    &-min > * + * {
+      margin-left: @u-dist-min !important;
+    }
+    &-small > * + * {
+      margin-left: @u-dist-small !important;
+    }
+    & > * + * {
+      margin-left: @u-dist-medium !important;
+    }
+    &-large > * + * {
+      margin-left: @u-dist-large !important;
+    }
+    &-max > * + * {
+      margin-left: @u-dist-max !important;
+    }
+  }
+}

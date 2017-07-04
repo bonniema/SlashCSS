@@ -35,38 +35,38 @@ body {
 // ------------------------------
 
 h1 {
-	font-size: @ms4;
-	line-height: @line-height * 2;
+	font-size: @h1;
+	line-height: 6.4rem;
 	margin-top: @line-height * 3;
 	margin-bottom: @line-height;
 }
 h2 {
-	font-size: @ms3;
-	line-height: @line-height * 2;
+	font-size: @h2;
+	line-height: 4.8rem;
 	margin-top: @line-height * 3;
 	margin-bottom: @line-height;
 }
 h3 {
-	font-size: @ms2;
-	line-height: @line-height;
+	font-size: @h3;
+	line-height: 3.2rem;
 	margin-top: @line-height * 2;
 	margin-bottom: @line-height;
 }
 h4 {
-	font-size: @ms1;
-	line-height: @line-height;
+	font-size: @h4;
+	line-height: 2.7rem;
 	margin-top: @line-height;
 	margin-bottom: @line-height;
 }
 h5 {
-	font-size: @ms0;
-	line-height: @line-height;
+	font-size: @h5;
+	line-height: 2.4rem;
 	margin-top: @line-height;
 	margin-bottom: @line-height;
 }
 h6 {
-	font-size: @ms-1;
-	line-height: @line-height;
+	font-size: @h6;
+	line-height: 1.9rem;
 	margin-top: @line-height;
 	margin-bottom: @line-height;
 }

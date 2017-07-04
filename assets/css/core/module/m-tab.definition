@@ -6,28 +6,28 @@
 .m-tab {
   &-list {
     margin: 0;
-    box-shadow: inset 0px -2px 0px 0px @shade;
+    box-shadow: inset 0px -2px 0px 0px @shade-light;
     &:after {
       content: "";
       display: table;
       clear: both;
     }
     @media @mobile, @tablet {
-      display: none; 
-    }  
+      display: none;
+    }
     &__item {
       display: inline-block;
       float: left;
       margin: 0;
       margin-right: @vr0;
       padding-bottom: @vr-1;
-      font-size: @ms1;
+      font-size: @h5;
       list-style: none;
       cursor: pointer;
       color: lighten(@default-color, 30%);
       &.is-active {
-        box-shadow: inset 0px -2px 0px 0px @brand-color;
-        color: @black;
+        box-shadow: inset 0px -2px 0px 0px darken(@brand-color, 20%);
+        color: darken(@brand-color, 20%);
       }
     }
   }
@@ -42,10 +42,10 @@
       display: none;
       margin: 0;
       padding: @vr0;
-      font-size: @ms0;
+      font-size: @h6;
       .box(@white);
       @media @mobile, @tablet {
-        display: block; 
+        display: block;
       }
       &.is-active {
         background: @brand-color;
@@ -62,9 +62,9 @@
 
   &-content {
     display: none;
-    &.is-active { 
+    &.is-active {
       display: block;
-      &.is-closed { 
+      &.is-closed {
         display: block;
       }
     }
@@ -96,7 +96,7 @@
         padding: @vr-1;
         cursor: pointer;
         font-weight: @regular;
-        font-size: @ms1;
+        font-size: @h5;
         list-style: none;
         cursor: pointer;
         color: lighten(@default-color, 30%);
@@ -131,13 +131,13 @@
   &.-only {
     .m-tab-list {
       @media @mobile, @tablet {
-        display: block; 
+        display: block;
       }
     }
     .m-tab-container {
       &__tab {
         @media @mobile, @tablet {
-          display: none; 
+          display: none;
         }
       }
     }
@@ -153,10 +153,10 @@
         display: block;
       }
     }
-    .m-tab-content { 
-      border: 1px solid #c1c1c1; 
-      &:last-child { 
-        border-bottom: 1px solid #c1c1c1; 
+    .m-tab-content {
+      border: 1px solid #c1c1c1;
+      &:last-child {
+        border-bottom: 1px solid #c1c1c1;
       }
     }
   }
@@ -165,7 +165,7 @@
   // General
   // ------------------------------
 
-  .is-closed { 
-    display: none; 
+  .is-closed {
+    display: none;
   }
 }

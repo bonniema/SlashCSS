@@ -1,16 +1,16 @@
 // Form Module
 // ============================================================
 
-@m-form-disabled-bg: @shade-heavy;
+@m-form-disabled-bg: @shade;
 
 .m-form-disabled {
   background: @m-form-disabled-bg;
+  color: fade(@default-color, .6);
   opacity: 0.6;
   pointer-events: none;
 }
 
 .m-form {
-
 
   label {
     display: block;
@@ -38,14 +38,14 @@
     max-width: 240px;
     min-height: @vr0;
     padding: @vr-1;
-    font-size: @ms0;
+    font-size: @h6;
     line-height: @line-height;
     color: @black;
     border-radius: @radius;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    .box(@shade-light);
+    .fill(darken(white,5%));
     &.-fluid {
       max-width: 100%;
     }
@@ -64,7 +64,7 @@
   &__message {
     font-size: 12px;
     font-style: italic;
-    color: lighten(@default-color, 20%);
+    color: lighten(@brand-color, 40%);
   }
 
 
@@ -77,13 +77,12 @@
     font-size: 18px;
     &-indicator {
       position: absolute;
-      top: 3px;
+      top: 5px;
       left: 0;
       height: 15px;
       width: 15px;
       border-radius: @radius;
-      background: white;
-      box-shadow: inset 0px 0px 0px 1px darken(@m-form-disabled-bg, 10%);
+      background: lighten(@brand-color, 50%);
       &:after {
         content: '';
         position: absolute;
@@ -117,10 +116,10 @@
       .m-form__checkbox-indicator {
         border-radius: 50%;
         &:after {
-          left: 6px;
-          top: 6px;
-          height: 6px;
-          width: 6px;
+          left: 4px;
+          top: 4px;
+          height: 7px;
+          width: 7px;
           border-radius: 50%;
           background: @brand-color;
         }
@@ -141,8 +140,7 @@
       opacity: 0;
       width: 10px;
       &:checked ~ .m-form__checkbox-indicator {
-        box-shadow: inset 0px 0px 0px 1px @brand-color;
-        background: lighten(@brand-color, 35%);
+        background: lighten(@brand-color, 50%);
         &:after {
           display: block;
         }
@@ -151,7 +149,6 @@
         opacity: 0;
         & ~ .m-form__checkbox-indicator {
           .m-form-disabled;
-          box-shadow: inset 0px 0px 0px 1px darken(@m-form-disabled-bg, 10%);
         }
       }
     }
@@ -175,12 +172,12 @@
       outline: 0;
       border: 0;
       border-radius: @radius;
-      font-size: @ms0;
+      font-size: @h6;
       color: @black;
       appearance: none;
       -webkit-appearance: none;
       -moz-appearance: none;
-      .box(white);
+      .fill(white);
       &:hover,
       &:focus {
         color: #000;
@@ -201,7 +198,7 @@
     }
     &-arrow {
       position: absolute;
-      top: 13px;
+      top: 17px;
       right: 14px;
       width: 8px;
       height: 8px;
@@ -215,13 +212,13 @@
   // Fields are white by default but shaded when sitting on a light background
   &.-card {
     input {
-      .box(@input-color); 
+      .fill(@input-color);
     }
     input:disabled {
-      .box(darken(@input-color, 15%)); 
+      .fill(darken(@input-color, 15%));
     }
     select {
-      .box(@input-color); 
+      .fill(@input-color);
     }
   }
 }

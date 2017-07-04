@@ -1,0 +1,200 @@
+// Margin Utility
+// ============================================================
+
+@u-marg-min: @vr-1;
+@u-marg-small: @vr0;
+@u-marg-medium: @vr1;
+@u-marg-large: @vr2;
+@u-marg-max: @vr3;
+
+
+.u-marg {
+  // Margin After
+  // ------------------------------
+  // Margin after element
+
+  &-top {
+    margin-top: @u-marg-medium !important;
+    &-min {
+      margin-top: @u-marg-min !important;
+    }
+    &-small {
+      margin-top: @u-marg-small !important;
+    }
+    &-large {
+      margin-top: @u-marg-large !important;
+    }
+    &-max {
+      margin-top: @u-marg-max !important;
+    }
+  }
+
+  &-bottom {
+    margin-bottom: @u-marg-medium !important;
+    &-min {
+      margin-bottom: @u-marg-min !important;
+    }
+    &-small {
+      margin-bottom: @u-marg-small !important;
+    }
+    &-large {
+      margin-bottom: @u-marg-large !important;
+    }
+    &-max {
+      margin-bottom: @u-marg-max !important;
+    }
+  }
+}
+
+@media @mobile {
+  .u-marg-m {
+    // Margin After
+    // ------------------------------
+    // Margin after element
+
+    &-top {
+      margin-top: @u-marg-medium !important;
+      &-min {
+        margin-top: @u-marg-min !important;
+      }
+      &-small {
+        margin-top: @u-marg-small !important;
+      }
+      &-large {
+        margin-top: @u-marg-large !important;
+      }
+      &-max {
+        margin-top: @u-marg-max !important;
+      }
+    }
+
+    &-bottom {
+      margin-bottom: @u-marg-medium !important;
+      &-min {
+        margin-bottom: @u-marg-min !important;
+      }
+      &-small {
+        margin-bottom: @u-marg-small !important;
+      }
+      &-large {
+        margin-bottom: @u-marg-large !important;
+      }
+      &-max {
+        margin-bottom: @u-marg-max !important;
+      }
+    }
+  }
+}
+
+@media @tablet {
+  .u-marg-t {
+    // Margin After
+    // ------------------------------
+    // Margin after element
+
+    &-top {
+      margin-top: @u-marg-medium !important;
+      &-min {
+        margin-top: @u-marg-min !important;
+      }
+      &-small {
+        margin-top: @u-marg-small !important;
+      }
+      &-large {
+        margin-top: @u-marg-large !important;
+      }
+      &-max {
+        margin-top: @u-marg-max !important;
+      }
+    }
+
+    &-bottom {
+      margin-bottom: @u-marg-medium !important;
+      &-min {
+        margin-bottom: @u-marg-min !important;
+      }
+      &-small {
+        margin-bottom: @u-marg-small !important;
+      }
+      &-large {
+        margin-bottom: @u-marg-large !important;
+      }
+      &-max {
+        margin-bottom: @u-marg-max !important;
+      }
+    }
+  }
+}
+
+@media @desktop {
+  .u-marg-d {
+    // Margin After
+    // ------------------------------
+    // Margin after element
+
+    &-top {
+      margin-top: @u-marg-medium !important;
+      &-min {
+        margin-top: @u-marg-min !important;
+      }
+      &-small {
+        margin-top: @u-marg-small !important;
+      }
+      &-large {
+        margin-top: @u-marg-large !important;
+      }
+      &-max {
+        margin-top: @u-marg-max !important;
+      }
+    }
+
+    &-bottom {
+      margin-bottom: @u-marg-medium !important;
+      &-min {
+        margin-bottom: @u-marg-min !important;
+      }
+      &-small {
+        margin-bottom: @u-marg-small !important;
+      }
+      &-large {
+        margin-bottom: @u-marg-large !important;
+      }
+      &-max {
+        margin-bottom: @u-marg-max !important;
+      }
+    }
+  }
+}
+
+// Viewport Margin
+// ------------------------------
+// Generates viewport based properties
+.mixin-marg-top-vh(@count, @i: 1) when (@i =< @count) {
+  .u-marg-top-@{i}vh {
+    margin-top: @i+0vh !important;
+  }
+  .mixin-marg-top-vh(@count, (@i + 1));
+}
+.mixin-marg-right-vh(@count, @i: 1) when (@i =< @count) {
+  .u-marg-right-@{i}vh {
+    margin-right: @i+0vw !important;
+  }
+  .mixin-marg-right-vh(@count, (@i + 1));
+}
+.mixin-marg-bottom-vh(@count, @i: 1) when (@i =< @count) {
+  .u-marg-bottom-@{i}vh {
+    margin-bottom: @i+0vh !important;
+  }
+  .mixin-marg-bottom-vh(@count, (@i + 1));
+}
+.mixin-marg-left-vh(@count, @i: 1) when (@i =< @count) {
+  .u-marg-left-@{i}vh {
+    margin-left: @i+0vw !important;
+  }
+  .mixin-marg-left-vh(@count, (@i + 1));
+}
+
+.mixin-marg-top-vh(20);
+.mixin-marg-right-vh(20);
+.mixin-marg-bottom-vh(20);
+.mixin-marg-left-vh(20);

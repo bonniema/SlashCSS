@@ -26,7 +26,7 @@
   td:before {
     content: attr(data-label);
     float: left;
-    font-size: @ms-1;
+    font-size: @h6;
     font-weight: @semi-bold;
     text-transform: uppercase;
     color: @black;
@@ -46,12 +46,12 @@
       .m-table-resp-properties;
     }
   }
-  &.-resp-m {
+  &.-m-resp {
     @media @mobile {
       .m-table-resp-properties;
     }
   }
-  &.-resp-t {
+  &.-t-resp {
     @media @tablet {
       .m-table-resp-properties;
     }
@@ -66,7 +66,7 @@
   thead {
     th {
       height: @vr2;
-      font-size: @ms0;
+      font-size: @h6;
       font-weight: @semi-bold;
       color: @black;
       &.-clickable {
@@ -89,6 +89,11 @@
   }
   tr {
     transition: background .2s ease;
+    &:last-child {
+      td {
+        border-bottom: 0;
+      }
+    }
   }
   th, td {
     height: @vr2;

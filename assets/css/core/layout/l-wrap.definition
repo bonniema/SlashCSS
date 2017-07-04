@@ -30,17 +30,17 @@
       padding: 0;
     }
   }
-  &.-flush-m {
+  &.-m-flush {
     @media @mobile {
       padding: 0;
     }
   }
-  &.-flush-t {
+  &.-t-flush {
     @media @tablet {
       padding: 0;
     }
   }
-  &.-flush-d {
+  &.-d-flush {
     @media @desktop {
       padding: 0;
     }

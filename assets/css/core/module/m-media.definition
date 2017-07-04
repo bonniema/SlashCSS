@@ -8,12 +8,12 @@
 
 .m-media {
 
-  display: flex;
+  display: inline-block;
   margin: 0;
 
   &__item {
-    display: flex;
-    align-items: center;
+    display: inline-block;
+    vertical-align: middle;
 
     & > img {
       display: block;

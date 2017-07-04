@@ -1,5 +1,5 @@
 # zap-css
-Lightweight and scalable CSS Framework built for modern applications
+Lightweight CSS system built for scalable & maintainable apps.
 
 ## Jekyll Boilerplate Available
 You can download the Zap boilerplate framework for Jekyll at https://github.com/studiobeneath/zap-jekyll

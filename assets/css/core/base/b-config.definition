@@ -7,22 +7,21 @@
 
 @max-width: 1440px;
 @radius: 4px;
-@background: #fff;
+@background: #ecf1f7;
 @default-columns: 16;
 @border: 1px solid #e4e4e4;
 
 // Typography
 // ------------------------------
 
-@font-family: 'Source Sans Pro', sans-serif;
-@font-size: 1.5rem; // html sets font-size to 62.5% which makes calculating rems easy 1.4rem = 14px etc
+@font-family: 'Open Sans', sans-serif;
+@font-size: 1.4rem; // html sets font-size to 62.5% which makes calculating rems easy 1.4rem = 14px etc
 @light: 300;
 @regular: 400;
 @medium: 600;
 @semi-bold: 600;
 @bold: 700;
 @line-height: 2.4rem; // 24px
-@scale-factor: 1.333; // (must be unitless)
 
 
 // Colors
@@ -39,15 +38,15 @@
 @white: #fff;
 
 // Special
-@default-color: #34495e;
-@brand-color: #23DBBE;
-@accent-color: #ff6a77;
+@default-color: #304C73;
+@brand-color: #304C73;
+@accent-color: #436cd0;
 @link-color: @accent-color;
 @midnight-color: #2A2A2A;
 @input-color: darken(@white, 4%);
-@shade-light: #F4FBFB;
-@shade: #DEECEC;
-@shade-heavy: #CBDEDE;
+@shade-light: darken(@background, 5%);
+@shade: darken(@background, 10%);
+@shade-heavy: darken(@background, 15%);
 
 
 // Breakpoints
@@ -63,21 +62,6 @@
 @tablet-inherit:  ~"only screen and (min-width: 720px)";
 @mobile-inherit:  ~"only screen";
 
-
-// Modular Scale
-// ------------------------------
-// Unit Scale for Text
-
-@ms-1: round(@font-size / @scale-factor, 1);
-@ms0: @font-size;
-@ms1: round(@font-size * @scale-factor, 1);
-@ms2: round(@font-size * pow(@scale-factor, 2), 1);
-@ms3: round(@font-size * pow(@scale-factor, 3), 1);
-@ms4: round(@font-size * pow(@scale-factor, 4), 1);
-@ms5: round(@font-size * pow(@scale-factor, 5), 1);
-@ms6: round(@font-size * pow(@scale-factor, 6), 1);
-
-
 // Vertical Rhythm
 // ------------------------------
 // Unit Scale for Padding, Margin etc
@@ -90,3 +74,21 @@
 @vr4: @line-height * 5;
 @vr5: @line-height * 6;
 @vr6: @line-height * 7;
+
+
+// Typography Scale
+// ------------------------------
+
+@h1: 4.8rem;
+@h2: 3.6rem;
+@h3: 2.4rem;
+@h4: 2rem;
+@h5: 1.8rem;
+@h6: 1.4rem;
+
+@h1-height: 6.4rem;
+@h2-height: 4.8rem;
+@h3-height: 3.2rem;
+@h4-height: 2.7rem;
+@h5-height: 2.4rem;
+@h6-height: 1.9rem;

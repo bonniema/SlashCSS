@@ -5,14 +5,14 @@
   flex: 1 0 auto;
   align-items: center;
   &__item {
-    color: @brand-color;
+    color: @link-color;
   }
   &__slash{
     margin-left: @vr-1;
     margin-right: @vr-1;
-    color: #CACACA;
+    color: lighten(@default-color, 20%);
   }
   &__current {
-    color: @black;
+    color: @default-color;
   }
 }

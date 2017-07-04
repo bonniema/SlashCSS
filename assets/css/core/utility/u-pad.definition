@@ -636,3 +636,36 @@
     }
   }
 }
+
+// Viewport Padding
+// ------------------------------
+// Generates viewport based properties
+.mixin-pad-top-vh(@count, @i: 1) when (@i =< @count) {
+  .u-pad-top-@{i}vh {
+    padding-top: @i+0vh !important;
+  }
+  .mixin-pad-top-vh(@count, (@i + 1));
+}
+.mixin-pad-right-vw(@count, @i: 1) when (@i =< @count) {
+  .u-pad-right-@{i}vw {
+    padding-right: @i+0vh !important;
+  }
+  .mixin-pad-right-vw(@count, (@i + 1));
+}
+.mixin-pad-bottom-vh(@count, @i: 1) when (@i =< @count) {
+  .u-pad-bottom-@{i}vh {
+    padding-bottom: @i+0vh !important;
+  }
+  .mixin-pad-bottom-vh(@count, (@i + 1));
+}
+.mixin-pad-left-vw(@count, @i: 1) when (@i =< @count) {
+  .u-pad-left-@{i}vw {
+    padding-left: @i+0vh !important;
+  }
+  .mixin-pad-left-vw(@count, (@i + 1));
+}
+
+.mixin-pad-top-vh(20);
+.mixin-pad-right-vw(20);
+.mixin-pad-bottom-vh(20);
+.mixin-pad-left-vw(20);

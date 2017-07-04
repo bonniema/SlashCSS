@@ -23,7 +23,7 @@
   > * {
     float: left;
   }
-  
+
   &.-table {
     display: table;
 
@@ -56,7 +56,7 @@
         vertical-align: bottom;
       }
     }
-    &.-stack-m {
+    &.-m-stack {
       @media @mobile {
         & > * {
           display: block;
@@ -64,7 +64,7 @@
         }
       }
     }
-    &.-stack-t {
+    &.-t-stack {
       @media @tablet {
         & > * {
           display: block;
@@ -72,7 +72,7 @@
         }
       }
     }
-    &.-stack-d {
+    &.-d-stack {
       @media @desktop {
         & > * {
           display: block;
@@ -129,19 +129,19 @@
     }
   }
   @media @mobile {
-    &.-tight-m {
+    &.-m-tight {
       margin-left: -@l-row-tight-width;
       & > * {
         padding-left: @l-row-tight-width;
       }
     }
-    &.-narrow-m {
+    &.-m-narrow {
       margin-left: -@l-row-narrow-width;
       & > * {
         padding-left: @l-row-narrow-width;
       }
     }
-    &.-wide-m {
+    &.-m-wide {
       margin-left: -@l-row-wide-width;
       & > * {
         padding-left: @l-row-wide-width;
@@ -149,19 +149,19 @@
     }
   }
   @media @tablet {
-    &.-tight-t {
+    &.-t-tight {
       margin-left: -@l-row-tight-width;
       & > * {
         padding-left: @l-row-tight-width;
       }
     }
-    &.-narrow-t {
+    &.-t-narrow {
       margin-left: -@l-row-narrow-width;
       & > * {
         padding-left: @l-row-narrow-width;
       }
     }
-    &.-wide-t {
+    &.-t-wide {
       margin-left: -@l-row-wide-width;
       & > * {
         padding-left: @l-row-wide-width;
@@ -169,19 +169,19 @@
     }
   }
   @media @desktop {
-    &.-tight-d {
+    &.-d-tight {
       margin-left: -@l-row-tight-width;
       & > * {
         padding-left: @l-row-tight-width;
       }
     }
-    &.-narrow-d {
+    &.-d-narrow {
       margin-left: -@l-row-narrow-width;
       & > * {
         padding-left: @l-row-narrow-width;
       }
     }
-    &.-wide-d {
+    &.-d-wide {
       margin-left: -@l-row-wide-width;
       & > * {
         padding-left: @l-row-wide-width;

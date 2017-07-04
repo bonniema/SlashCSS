@@ -60,7 +60,7 @@
   border: none;
   border-radius: @s-button-radius;
   font-family: @s-button-font-family;
-  font-size: @ms0;
+  font-size: @h6;
   font-weight: @s-button-font-weight;
   line-height: 2rem;
   color: white;
@@ -117,15 +117,11 @@
 
   &.-small {
     padding: 0 @vr-1 0 @vr-1;
-    font-size: @ms-1;
-  }
-  &.-medium {
-    padding: @vr-1 + (@vr-1 / 2);
-    font-size: @ms0;
+    font-size: @h6 - 0.1rem;
   }
   &.-large {
     padding: @vr0;
-    font-size: @ms1;
+    font-size: @h5;
   }
 
   // Weight

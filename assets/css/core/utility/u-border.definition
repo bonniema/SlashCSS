@@ -19,3 +19,6 @@
 .u-border-left {
   border-left: @u-border !important;
 }
+.u-border-radius {
+  border-radius: @radius !important;
+}

@@ -219,6 +219,12 @@
 		"oAP": "\/core\/utility\/u-show.definition",
 		"oF": 0
 		},
+	"\/core\/utility\/u-space.definition": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/core\/utility\/u-space.definition",
+		"oF": 0
+		},
 	"\/zap.css": {
 		"aP": 0,
 		"bl": 0,

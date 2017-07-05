@@ -20,10 +20,10 @@
       max-width: none;
     }
     &.-top {
-      align-items: flex-start;
+      vertical-align: top;
     }
     &.-bottom {
-      align-items: flex-end;
+      vertical-align: bottom;
     }
     &.-tight {
       padding-right: @m-media-tight;
